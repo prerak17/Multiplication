@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<style>
+    .main{
+        margin: 0 auto;
+       margin-top: 15em;
+       border-style: solid;
+       width: 22em;
+       
+    }
+    .but{
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    background-color:black;
+    }
+    .main1{
+        height: 1.5em;
+        width: 5cm;
+        font-size: 1em;
+    }
+    .Head{
+        
+        margin: 0 auto;
+        width: 280px;
+        color: black;
+       
+        
+    }
+    .tab{
+        background-color: gray;
+    }
+    .main2{
+        font-size: 1.8em;
+    }
+    </style>
+</head>
+<body class="main" > 
+   <div class="tab">
+    <table  align="center">
+        <tr>
+                <h1 class="Head">Multiplication Table</h1>
+        </tr>
+        <tr>
+            <td><input type="number" class="main1" id="txtnumber" placeholder="ENter NUmber:" ></td>
+            <td><input type="button" class="but" value="Submit" onclick='result()' </td>
+        </tr>
+        <tr>
+                <td class="main2" colspan="2" id="multi" ></td>
+        </tr>
+      
+    </table>
+    <!--<p id="multi"></p>-->
+</div>
+
+    <script>
+        function result(){
+          var num;
+          var table="";
+            var number="";
+          num=Number(document.getElementById('txtnumber').value);
+          for(var i=1;i<=10;i++)
+          {
+             number=num*i;
+               table += num + " " + " " + "*" + " " + " "  + i + " " + " " + "=" + " " + " "  + number + "<br/>"; 
+                document.getElementById("multi").innerHTML = table;
+          }
+        }    
+    </script>
+</body>
+</html>
